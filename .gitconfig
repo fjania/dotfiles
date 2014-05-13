@@ -1,0 +1,15 @@
+[color]
+	ui = true
+[user]
+	name = Frank Jania
+	email = fjania@findings.com
+[alias]
+	co = checkout
+	lpa = log --format=\"%Cred%h%Creset - %s (%an)\"
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	rso = remote show origin
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
+[core]
+	editor = vi
+	page = less -+$LESS -FRX
+	pager = less -r
