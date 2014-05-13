@@ -174,9 +174,12 @@ set mouse=nicr
 
 """ I almost never open vim with a filename anymore, so open cmd-t
 """ as soon as vim opens.
-if argc() is 0
-    autocmd VimEnter * CommandT
-endif
+""if argc() is 0
+""    autocmd VimEnter * CommandT
+""endif
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlP'
 
 """ Copy/Paste
 nnoremap <leader>d "*dd
