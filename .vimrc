@@ -180,6 +180,7 @@ set mouse=nicr
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_show_hidden = 1
 
 """ Copy/Paste
 nnoremap <leader>d "*dd
