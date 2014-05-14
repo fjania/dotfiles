@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/fjania/dev/tapestry/tapestry-webapp/tapestry/apps/notification'
 let g:netrw_dirhist_2='/Users/fjania/dev/tapestry/tapestry-webapp/tapestry/apps/collection/static/css'
 let g:netrw_dirhist_3='/Users/fjania/dev/tapestry/server/appserver/supervisord'
 let g:netrw_dirhist_4='/tmp'
 let g:netrw_dirhist_5='/Users/fjania/Desktop'
 let g:netrw_dirhist_6='/Users/fjania/dev/tapestry/tapestry-webapp/server'
+let g:netrw_dirhist_7='/Users/fjania/.vim/bundle/vim-snippets/pythonx'
