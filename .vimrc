@@ -204,7 +204,7 @@ let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:50,results:50'
 " ultisnip settings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """ Copy/Paste
