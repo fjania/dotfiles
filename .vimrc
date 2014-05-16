@@ -189,6 +189,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'SirVer/ultisnips'
+
+Bundle 'derekwyatt/vim-scala'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
