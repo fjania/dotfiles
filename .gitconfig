@@ -13,3 +13,5 @@
 	editor = vi
 	page = less -+$LESS -FRX
 	pager = less -r
+[push]
+	default = simple
