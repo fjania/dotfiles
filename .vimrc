@@ -198,13 +198,16 @@ Plugin 'honza/vim-snippets'
 call vundle#end()            " required
 
 " ctrlp settings
+set wildignore+=*/.git/*,node_modules
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:50,results:50'
+"let g:ctrlp_user_command = 'find %s -type f'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules',
   \ }
+
 " ultisnip settings
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
