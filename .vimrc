@@ -122,7 +122,6 @@ augroup END
 
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
 set expandtab
 set wrap
 " set textwidth=80
@@ -229,3 +228,7 @@ function! g:ToggleNuMode()
         set rnu
     endif
 endfunc
+
+
+""" Filetype specifics
+filetype plugin indent on
