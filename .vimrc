@@ -204,7 +204,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:50,results:50'
 "let g:ctrlp_user_command = 'find %s -type f'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'node_modules',
+  \ 'dir':  'node_modules\|build',
   \ }
 
 " ultisnip settings
