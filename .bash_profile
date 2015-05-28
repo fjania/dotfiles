@@ -21,3 +21,6 @@ function get_branch {
     git branch 2> /dev/null | grep \* | awk '{print "("$2")"}'
 }
 PS1="\[\033[31m\]\$(get_branch)\[\033[37m\]\n\[\033[00m\]\[\033[38m\]\u@\h:\w$ "
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
