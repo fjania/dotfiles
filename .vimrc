@@ -131,12 +131,9 @@ set colorcolumn=+1
 " }}}
 " Backups {{{
 
-
-set undodir=~/.vimtmp/undo/     " undo files
-set backupdir=~/.vimtmp/backup/ " backups
-set directory=~/.vimtmp/swap/   " swap files
-"set backup                        " enable backups
-set noswapfile                    " It's 2012, Vim.
+set nobackup
+set nowb
+set noswapfile
 
 " }}}
 " Leader {{{
