@@ -134,6 +134,7 @@ set colorcolumn=+1
 set nobackup
 set nowb
 set noswapfile
+set noundofile
 
 " }}}
 " Leader {{{
