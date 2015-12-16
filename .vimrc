@@ -230,3 +230,6 @@ endfunc
 
 """ Filetype specifics
 filetype plugin indent on
+
+""" Nuke trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
