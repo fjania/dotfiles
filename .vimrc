@@ -185,11 +185,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
-Plugin 'SirVer/ultisnips'
-
-Bundle 'derekwyatt/vim-scala'
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -204,12 +199,6 @@ let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:50,results:50'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'node_modules\|build',
   \ }
-
-" ultisnip settings
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """ Copy/Paste
 nnoremap <leader>d "*dd
