@@ -222,3 +222,7 @@ filetype plugin indent on
 
 """ Nuke trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+
+""" Filetype specific settings
+autocmd Filetype go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
