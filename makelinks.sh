@@ -6,3 +6,4 @@ ln -fs ~/dotfiles/.inputrc ~/.inputrc
 ln -fs ~/dotfiles/.vim ~/.vim
 ln -fs ~/dotfiles/.vimrc ~/.vimrc
 ln -fs ~/dotfiles/.psqlrc ~/.psqlrc
+ln -fs ~/dotfiles/.zshrc ~/.zshrc
