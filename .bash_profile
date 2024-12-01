@@ -27,3 +27,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Don't show dupes in the history
 export HISTCONTROL=ignoredups
+
+. "$HOME/.local/bin/env"
