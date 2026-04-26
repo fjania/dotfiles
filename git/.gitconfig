@@ -29,6 +29,8 @@
 	conflictstyle = zdiff3
 [ghq]
 	root = ~/src
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 [diff]
 	algorithm = histogram
 	colorMoved = default
