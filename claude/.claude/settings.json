@@ -1,7 +1,11 @@
 {
-  "theme": "dark",
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline.sh"
+  },
+  "theme": "dark",
+  "skipAutoPermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "auto"
   }
 }
