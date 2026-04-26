@@ -2,8 +2,8 @@
 
 # ========= PATH =========
 # Homebrew is set up via ~/.zprofile (eval brew shellenv)
-# uv installer
-[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+# ~/.local/bin — Claude Code, uv, and other user-local installs
+[[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && export PATH="$HOME/.local/bin:$PATH"
 
 # pyenv
 if command -v pyenv >/dev/null 2>&1; then

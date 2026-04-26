@@ -11,7 +11,7 @@ set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP="$HOME/.dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
-PACKAGES=(git zsh psql nvim)
+PACKAGES=(git zsh psql nvim ghostty claude)
 
 # 1. Homebrew
 if ! command -v brew >/dev/null 2>&1; then
@@ -26,14 +26,26 @@ if [ -f "$DOTFILES/Brewfile" ]; then
     brew bundle --file="$DOTFILES/Brewfile"
 fi
 
-# 3. Back up conflicting files (anything in $HOME that's NOT a symlink and would be overwritten)
+# 3. Back up conflicting files
+#    A file in $HOME conflicts only if it's a real file (not a symlink) AND it
+#    doesn't already resolve back into this repo. Stow may fold a whole dir into
+#    a single parent symlink (e.g. ~/.config/nvim -> dotfiles/nvim/.config/nvim);
+#    in that case the children look like real files but live inside the repo,
+#    and `mv`-ing them would delete them from the repo.
 backup_if_exists() {
     local target="$1"
-    if [ -e "$target" ] && [ ! -L "$target" ]; then
-        mkdir -p "$BACKUP"
-        echo "Backing up $target -> $BACKUP/"
-        mv "$target" "$BACKUP/"
-    fi
+    [ -e "$target" ] || return 0
+    [ -L "$target" ] && return 0
+    # Resolve through any folded parent symlinks. If the file already lives in
+    # this repo, it's stowed correctly — leave it.
+    local resolved
+    resolved="$(cd "$(dirname "$target")" && pwd -P)/$(basename "$target")"
+    case "$resolved" in
+        "$DOTFILES"/*) return 0 ;;
+    esac
+    mkdir -p "$BACKUP"
+    echo "Backing up $target -> $BACKUP/"
+    mv "$target" "$BACKUP/"
 }
 for pkg in "${PACKAGES[@]}"; do
     while IFS= read -r relpath; do

@@ -30,6 +30,13 @@ brew "direnv"
 # Editor
 brew "neovim"
 
+# Terminal
+cask "ghostty"
+
 # Nerd fonts (terminal must be set to use one of these)
 cask "font-jetbrains-mono-nerd-font"
 cask "font-fira-code-nerd-font"
+
+# Claude Code is installed via the official script (not brew):
+#   curl -fsSL https://claude.ai/install.sh | bash
+# It lands at ~/.local/bin/claude, which is added to PATH in zsh/.zshrc.
