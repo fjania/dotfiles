@@ -1,17 +1,44 @@
-[color]
-	ui = true
 [user]
 	name = Frank Jania
-	email = fjania@findings.com
+	email = fjania@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+	autoSquash = true
+[push]
+	default = simple
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[color]
+	ui = true
 [alias]
 	co = checkout
 	lpa = log --format=\"%Cred%h%Creset - %s (%an)\"
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	rso = remote show origin
 	conflicts = !git ls-files -u | cut -f 2 | sort -u
-[core]
-	editor = vi
-	page = less -+$LESS -FRX
-	pager = less -r
-[push]
-	default = simple
