@@ -27,6 +27,8 @@
 	autoupdate = true
 [merge]
 	conflictstyle = zdiff3
+[ghq]
+	root = ~/src
 [diff]
 	algorithm = histogram
 	colorMoved = default

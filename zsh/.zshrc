@@ -42,6 +42,16 @@ command -v bat   >/dev/null 2>&1 && alias cat="bat --paging=never"
 command -v nvim  >/dev/null 2>&1 && { alias vi="nvim"; alias vim="nvim"; }
 alias g="git"
 
+# ========= ghq + fzf: jump to any local clone =========
+# `cdr` (cd-to-repo): pick from `ghq list` via fzf and cd into it.
+if command -v ghq >/dev/null 2>&1 && command -v fzf >/dev/null 2>&1; then
+    cdr() {
+        local repo
+        repo=$(ghq list --full-path | fzf --query="$*" --select-1 --exit-0) || return
+        cd "$repo"
+    }
+fi
+
 # ========= Plugins =========
 # Order matters: compinit must be done above; syntax-highlighting must be last.
 

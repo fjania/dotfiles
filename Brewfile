@@ -20,6 +20,7 @@ brew "ripgrep"      # grep
 brew "fzf"          # fuzzy finder (Ctrl-R / Ctrl-T)
 brew "zoxide"       # smarter cd (z, zi)
 brew "atuin"        # searchable shell history
+brew "ghq"          # clone & organize repos under ~/src/<host>/<owner>/<repo>
 
 # Git
 brew "git-delta"    # diff pager (referenced by .gitconfig)
