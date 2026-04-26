@@ -23,6 +23,7 @@ brew "atuin"        # searchable shell history
 
 # Git
 brew "git-delta"    # diff pager (referenced by .gitconfig)
+brew "jq"           # JSON parsing (used by ~/.claude/statusline.sh)
 
 # Per-directory env
 brew "direnv"
