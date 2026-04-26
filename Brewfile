@@ -31,6 +31,9 @@ brew "direnv"
 # Editor
 brew "neovim"
 
+# Node — runtime for npx-based MCP servers (chrome-devtools-mcp etc.)
+brew "node"
+
 # Terminal
 cask "ghostty"
 
